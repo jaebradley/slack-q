@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "slaq"
+version = "0.0.1"
+description = "A queue-as-a-service Slack Bot"
+authors = ["Jae Bradley <jae.b.bradley@gmail.com>"]
+maintainers = ["Jae Bradley <jae.b.bradley@gmail.com>"]
+license = "MIT"
+keywords = ["Slack", "Queue"]
+repository = "https://github.com/jaebradley/slaq"
+homepage = "https://jaebradley.github.io/slaq"
+readme = "README.md"
+packages=[{include ="slaq"}]
+exclude = ["tests", "docs"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+coverage = "^7.6.1"
+pytest = "^8.3.2"
+
+[tool.poetry.urls]
+issues = "https://github.com/jaebradley/slaq/issues"
+pull_requests = "https://github.com/jaebradley/slaq/pull_requests"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = "slaq"
+testpaths = "tests"
+
